@@ -61,7 +61,7 @@
 
  }
 
- p {font-family: Arial; font-size: 15px; margin: 10px;}
+ p {font-family: Arial; font-size: 15px; margin: 15px;}
 
  h1 {
   color: black; font-size:50px;font-family: Garamond; text-align: center; font-style: bold; margin:auto;
@@ -70,9 +70,12 @@
 h2 {color: black; font-size:30px;font-family: Garamond; font-style: bold; margin:auto;
   text-decoration: underline; margin-bottom: 20px; margin-top: 20px;}
 
+h3 {color: black; font-size:24px;font-family: Garamond;
+ text-align:left;margin-bottom: 20px; margin-left: 20px}
+
 .info {color: black; font-size:22px;font-family: Garamond; text-align: left;
 list-style-type: none;
-margin: 20px;
+margin: 40px;
   background-color: #ffffff;
   border: 2px solid black;
   opacity: 0.9;

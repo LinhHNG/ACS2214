@@ -61,6 +61,8 @@
 
  }
 
+ p {font-family: Arial; font-size: 15px;}
+
  h1 {
   color: black; font-size:50px;font-family: Garamond; text-align: center; font-style: bold; margin:auto;
   text-decoration: underline; margin-bottom: 20px; margin-top: 20px;}

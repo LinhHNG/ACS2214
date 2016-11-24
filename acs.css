@@ -67,3 +67,11 @@
 
 h2 {color: black; font-size:30px;font-family: Garamond; font-style: bold; margin:auto;
   text-decoration: underline; margin-bottom: 20px; margin-top: 20px;}
+
+.info {color: black; font-size:22px;font-family: Garamond; text-align: left;
+list-style-type: none;
+margin: 20px;
+  background-color: #ffffff;
+  border: 2px solid black;
+  opacity: 0.9;
+  filter: alpha (opacity=70);

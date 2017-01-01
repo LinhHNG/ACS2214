@@ -34,7 +34,7 @@
 .nav a.active {
 /*  background-color: #7FFFD4;*/
   color: #444;
-  cursor: default; }
+  cursor: default; width: 210px;}
 
 
 .nav li {

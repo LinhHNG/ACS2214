@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<link href='bootstrap-3.3.7-dist/css/bootstrap.css' rel='stylesheet'>
+	<head>
+  <style>
+body {
+    background-image: url("#");/*background-size: cover*/;}
+    .nav a.active {
+  background-color:#ffcccc;}
+   
+  
+</style>
+		<link rel="stylesheet" type="text/css" href="acs.css">
+		<link href='bootstrap-3.3.7-dist/css/bootstrap.css' rel='stylesheet'>
+
+		<script
+			  src="https://code.jquery.com/jquery-3.1.1.js"
+			  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+			  crossorigin="anonymous"></script>
+
+		<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+</head>
+
+		<body>
+  
+	<title> Team Yip Yip</title>
+	
+  
+<div class=" nav">
+	<ul>
+        <li class="Home"><a href=" ACS2214.html ">Home</a></li>
+ 		<li class="Therapy"><a href="  Diagnosis.html  ">Therapy</a></li>
+        <li class="Treatment"><a  href=" Treatment.html ">Treatment</a></li>
+        <li class="Devices"><a href="Devices.html">Devices</a></li>
+        <li class="Model"><a class="active" href=" Model.html ">Model</a></li>
+     </ul>
+ </div>
+
+<h1> Model </h1>
+
+<h2> Demonstrating the use of feedback in Bioengineering </h2>
+<div class=" info">
+	<h3>Introduction</h3>
+	<p>Feedback is the process by which the output from a system is analysed against a set of parameters leading to instructions being input back into the system to control or change the behaviour of that system to achieve a desired target result. In this project, feedback is used to maintain a constant temperature range within a small semi-enclosed controlled environment. The output from the system is the temperature measured by a thermal sensor within the controlled environment which is used to vary the speed of a cooling fan to regulate the temperature of the box. Typical real life applications for this system include incubators and containers requiring specific temperatures to be maintained for certain chemical or biological processes. </p>
+	<h3>Technical setup</h3>
+	<p>An open sided box measuring approximately 300x260x200mm acts as the incubator with a thermal sensory centrally placed within it. A 30W light bulb mounted within the box provides the heat source for this demonstration. A twin fan lap top cooler is vertically mounted to one side of the box to provide cooling when required. This is setup is shown on figure 1 </p>
+	<img src="setup.jpg" alt="setup" style="border-radius: 60px; display: block;margin: auto;width: 600px;height: auto;">
+	<figcaption>Fig. 1 The incubator setup</figcaption>
+	<img src="circuit.jpg" alt="circuit" style="border-radius: 60px; display: block;margin: auto;width: 600px;height: auto;">
+	<figcaption>Fig. 2 The circuitry setup. Arduino board top right and bread board below it.</figcaption>
+	<p>The main part of the electronic circuitry comprises an Arduino ‘mother board’ [1] and an accompanying bread board mounted on top of the box. The board incorporates an LCD display which gives the temperature and fan speed readings. A photo showing these is shown on figure 2. The Arduino board is connected to a laptop computer running Windows 8 which is programmed to control the whole setup. The programming code is contained in appendix A of this report [2]. The circuit diagram for the fan controller identifying the main electronic components are shown on figures 3. </p>
+	<img src="schematic.jpg" alt="schematic" style="border-radius: 60px; display: block;margin: auto;width: 600px;height: auto;">
+	<figcaption>Fig. 3 Schematic for fan controller. A – Represents the Thermal Sensor.</figcaption>
+	<h3>Working demonstration</h3>
+	<p>When the programme is initiated from the laptop, the LCD and laptop monitor display the existing temperature detected by the thermal sensor, in this case the room ambient temperature which would be around 20 deg C. For this demonstration, the temperature in the incubator is programmed to stay below 25 deg C. The light bulb is then turned on which heats the air in the box. As the temperature rises beyond the 25 deg C, the programme is coded to start the fan to cool the air. The higher the temperature rises, the faster the fan will turn. The speed of the fan is also displayed on the LCD and monitor. The fan will run sufficiently fast to lower the temperature below 25 deg C. This is a simple demonstration of how feedback from the thermal sensor is used to control the temperature of the incubator by controlling the fan speed.</p>
+
+	<h3>APPENDIX </h3>
+		<div class=" appendix">
+		<pre>
+#include "DHT.h"
+#define DHTPIN 2
+#define DHTTYPE DHT11
+DHT dht(DHTPIN, DHTTYPE);
+#include <LiquidCrystal.h>
+//                         BS  E  D4 D5 D6 D7
+LiquidCrystal lcd(7, 8, 9, 10, 5, 12);
+int tempPin=A1;
+float tempC;
+int temp;
+int fan=11;
+int tempMin=25;
+int tempMax=31;
+int fanSpeed;
+int fanLCD;
+
+void setup() 
+{
+  analogReference(INTERNAL);
+  pinMode(fan, OUTPUT);
+  pinMode(tempPin, INPUT);
+  Serial.begin(9600);  
+  lcd.begin(16, 2);
+}
+void loop()
+{
+  temp = analogRead(tempPin);
+  tempC = temp/10;
+ //float h = dht.readHumidity();
+ // Read temperature as Celsius (the default)
+ //float t = dht.readTemperature();
+ // Read temperature as Fahrenheit (isFahrenheit = true)
+ //float f = dht.readTemperature(true);
+ //         ----------------
+ if(tempC <= tempMin){
+  fanSpeed=0;
+  digitalWrite(fan, LOW);}
+ if(tempC > tempMin){
+  fanSpeed = map(tempC, tempMin, tempMax, 70, 120);}
+  analogWrite(fan, fanSpeed);
+
+  fanLCD = map(tempC, tempMin, tempMax, 0, 100);
+  Serial.println(fanLCD);
+  Serial.println(tempC);
+  
+  lcd.print("Temp       C  ");
+  lcd.setCursor(6, 0);
+  lcd.print(tempC);
+
+   lcd.setCursor(0,1);   // move cursor to next line
+   lcd.print("FANS: ");
+   lcd.print(fanLCD);    // display the fan speed
+   lcd.print("%            ");
+   delay(2000);
+  } 
+
+
+</pre>
+</div>
+</div>
+</body>
+</html>

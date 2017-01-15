@@ -93,8 +93,10 @@ margin: 40px;
   ul {font-family: Arial; font-size: 15px; margin: 15px;}
 
   .references ol {font-family: Arial; font-size: 13px; margin: 15px;}
-
-  .appendix {background-color: #FFB6C1;
-  border: 0px ;
+.appendix {color: black; font-size:22px;font-family: Garamond; text-align: left;
+list-style-type: none;
+  background-color: #ffe6e6;
+  margin: 40px;
+  border: 2px;
   opacity: 0.9;
-  filter: alpha (opacity=70); font-style: Agency FB;}
+  filter: alpha (opacity=70);}

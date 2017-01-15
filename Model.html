@@ -53,9 +53,10 @@ body {
 	<figcaption>Fig. 3 Schematic for fan controller. A – Represents the Thermal Sensor.</figcaption>
 	<h3>Working demonstration</h3>
 	<p>When the programme is initiated from the laptop, the LCD and laptop monitor display the existing temperature detected by the thermal sensor, in this case the room ambient temperature which would be around 20 deg C. For this demonstration, the temperature in the incubator is programmed to stay below 25 deg C. The light bulb is then turned on which heats the air in the box. As the temperature rises beyond the 25 deg C, the programme is coded to start the fan to cool the air. The higher the temperature rises, the faster the fan will turn. The speed of the fan is also displayed on the LCD and monitor. The fan will run sufficiently fast to lower the temperature below 25 deg C. This is a simple demonstration of how feedback from the thermal sensor is used to control the temperature of the incubator by controlling the fan speed.</p>
+	</div>
 
 	<h3>APPENDIX </h3>
-		<div class=" appendix">
+		<div class="appendix">
 		<pre>
 #include "DHT.h"
 #define DHTPIN 2
@@ -116,7 +117,7 @@ void loop()
 
 </pre>
 </div>
-</div>
+
 
 <div class=" References">
 		<h4> References </h4>

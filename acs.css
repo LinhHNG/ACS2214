@@ -89,3 +89,7 @@ margin: 40px;
   figcaption {font-size: 20px}
 
   ol {font-family: Arial; font-size: 15px; margin: 15px;}
+  li { margin-bottom: 7px; }
+  ul {font-family: Arial; font-size: 15px; margin: 15px;}
+
+  .references ol {font-family: Arial; font-size: 13px; margin: 15px;}

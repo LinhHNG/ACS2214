@@ -100,3 +100,5 @@ list-style-type: none;
   border: 2px;
   opacity: 0.9;
   filter: alpha (opacity=70);}
+
+  .title {font-size: 45px;}

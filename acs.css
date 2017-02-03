@@ -28,13 +28,13 @@
 
 }
  .nav a:hover {
-  background-color: #e5e5e5; width: 230px;
+  background-color: #e5e5e5; width: 210px; height: auto;
 }
 
 .nav a.active {
 /*  background-color: #7FFFD4;*/
   color: #444;
-  cursor: default; width: 210px;}
+  cursor: default; width: 210px; height: auto;}
 
 
 .nav li {
@@ -51,7 +51,7 @@
     a{
     color: black;
     /*font-size: 25px;*/
-    margin-bottom: 20px;
+    margin-bottom: none;
     margin-right: 30px;
     font-family: Garamond;
     display:inline-block;

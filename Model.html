@@ -42,7 +42,12 @@ body {
 <div class=" info">
 	<h3>Introduction</h3>
 	<p>Feedback is the process by which the output from a system is analysed against a set of parameters leading to instructions being input back into the system to control or change the behaviour of that system to achieve a desired target result. In this project, feedback is used to maintain a constant temperature range within a small semi-enclosed controlled environment. The output from the system is the temperature measured by a thermal sensor within the controlled environment which is used to vary the speed of a cooling fan to regulate the temperature of the box. Typical real life applications for this system include incubators and containers requiring specific temperatures to be maintained for certain chemical or biological processes. </p>
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/dAUIIjpmJxQ" frameborder="0" allowfullscreen></iframe>
+
+		<div align="center">
+
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/dAUIIjpmJxQ" frameborder="0" allowfullscreen></iframe> 
+		</div>
+
 	<h3>Technical setup</h3>
 	<p>An open sided box measuring approximately 300x260x200mm acts as the incubator with a thermal sensory centrally placed within it. A 30W light bulb mounted within the box provides the heat source for this demonstration. A twin fan lap top cooler is vertically mounted to one side of the box to provide cooling when required. This is setup is shown on figure 1 </p>
 	<img src="setup.jpg" alt="setup" style="border-radius: 60px; display: block;margin: auto;width: 600px;height: auto;">
@@ -54,6 +59,7 @@ body {
 	<figcaption>Fig. 3 Schematic for fan controller. A – Represents the Thermal Sensor.</figcaption>
 	<h3>Working demonstration</h3>
 	<p>When the programme is initiated from the laptop, the LCD and laptop monitor display the existing temperature detected by the thermal sensor, in this case the room ambient temperature which would be around 20 deg C. For this demonstration, the temperature in the incubator is programmed to stay below 24 deg C. The light bulb is then turned on which heats the air in the box. As the temperature rises beyond the 24 deg C, the programme is coded to start the fan to cool the air. The higher the temperature rises, the faster the fan will turn. The speed of the fan is also displayed on the LCD and monitor. The fan will run sufficiently fast to lower the temperature below 24 deg C. This is a simple demonstration of how feedback from the thermal sensor is used to control the temperature of the incubator by controlling the fan speed.</p>
+
 	</div>
 
 	

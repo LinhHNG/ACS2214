@@ -84,34 +84,40 @@ body {
 	<h2>Bioreactors</h2>
 		<div class=" info">
 		<h3> Introduction </h3>
-		<p>A bioreactor is any engineered system that utilises supports live organisms within it as part of its function (e.g. hosting bacteria that break down sewage),  but in the context of bioengineering usually refers to any device that can be used to grow micro-organisms or tissue cultures. As such it needs to provide essential nutrients and remove waste by-products in order to maintain the colonies. While this can be done without feedback, creating feedback loops allows specific concentrations of each to be maintained thus maximising efficiency of the system by creating optimum conditions.[1] </p>
+		<p>A bioreactor is any engineered system that utilises supports live organisms within it as part of its function (e.g. hosting bacteria that break down sewage),  but in the context of bioengineering usually refers to any device that can be used to grow microorganisms or tissue cultures. As such it needs to provide essential nutrients and remove waste by-products in order to maintain the colonies. While this can be done without feedback, creating feedback loops allows specific concentrations of each to be maintained thus maximising efficiency of the system by creating optimum conditions. 
+
+		Because it can also be used for medical purposes, we included it along with the other bioengineering devices. Its uses are in vitro testing, as cells can be grown to test biocompatibility with biomaterials, chemotherapy medication, medical drugs and many more on human cell cultures before being put inside patients. [1] [4]
+</p>
 
 
 	<h3> Overview </h3>
 		<img src="overview.jpg" alt="overview" style="border-radius: 60px; display: block;margin: auto;width: 850px;height: auto;">
-		<figcaption>Fig.1 CAP HERE</figcaption>
+		<figcaption>Fig.1 
+
+		Illustration of different components connected to the bioreactor[7]</figcaption>
 		<img src="bioreactor.jpg" alt="bioreactor" style="border-radius: 60px; display: block;margin: auto;width: 600px;height: auto;">
-		<figcaption>Fig.2 CAP HERE</figcaption>
+		<figcaption>Fig.2 A bioreactor sold by Sartorius, model BIOSTAT® STR [8]</figcaption>
 
 		<p>The bioreactor consists of a chamber with various connected probes, measuring temperature, humidity, CO₂ concentration and O₂ concentration. The optimum levels for each of these is inputted with suitable parameters on either side. If the value within the bioreactor falls out of this range, the probes relay the information to the various apparatus required in order to bring it back to optimum levels. E.g. if the temperature were to drop too low, the heater would be activated to bring it back up. 
-		Usually the ideal conditions are a temperature of 37⁰C, relative humidity of 80%, CO₂ concentration of 5% and O₂ concentration of 20%.[2][3]
+		Usually the ideal conditions are a temperature of 37⁰C, relative humidity of 80%, CO₂ concentration of 5% and O₂ concentration of 20%. [2] [3]
 		</p>
 		<h3> Difficulties with modern bioreactors </h3>
 		<p>
+			Designing control systems for bioreactors however presents many problems for a number of reasons.
 			<ol>
 			<li>Compared to other fields of engineering etc, creating mathematical models accurately describing cell growth has proven difficult due to the more random nature of cell division. The control system must therefore be robust enough to account for potentially large uncertainties in the model.</li>
 			<li>Sensors needed for measuring the different variables within the bioreactor are often not very reliable, meaning submitted data from the system may not be highly accurate, which requires the control system to be able to reject disturbances.</li>
 			<li>The growth of micro-organsims is non-linear and will vary greatly over time. The control system will need to be able to use the available measurable variables to estimate future parameters from.</li>
-			<li>Changing metabolite concentrations also has a very slow response time on growth which will not be immediately measurable. To prevent metabolite concentration being altered past the point required the system must have a form of predictive control in place.[4]</li>
+			<li>Changing metabolite concentrations also has a very slow response time on growth which will not be immediately measurable. To prevent metabolite concentration being altered past the point required the system must have a form of predictive control in place. [4]</li>
 			</ol>
 		</p>
 		<h3>How are the different variables measured?</h3>
 			<p>
 			UV rays are emitted into the bioreactor as it excites NADH/NADPH (which can be found in all organisms) causing them to emit fluorescence. This fluorescence can be measured and give a quantitative figure to help determine the concentration of microorganisms in the bioreactor. 
+			Dissolved oxygen concentration can be measured through a number of methods. One of the most common is to titrate samples of the bioreactor mixture at regular intervals against sodium sulphite and calculate the oxygen concentration from the amount needed to oxidise the sulphite to sulphate. [5]
+			A pH probe can easily measure pH. This helps determine carbon dioxide concentration too as we can use knowledge of the carbon dioxide buffer system to calculate carbon dioxide concentration from carbonic acid concentration. [6]
 
-			Dissolved oxygen concentration can be measured through a number of methods. One of the most common is to titrate samples of the bioreactor mixture at regular intervals against sodium sulphite and calculate the oxygen concentration from the amount needed to oxidise the sulphite to sulphate. 
 
-			A pH probe can easily measure pH. This helps determine carbon dioxide concentration too as we can use knowledge of the carbon dioxide buffer system to calculate carbon dioxide concentration from carbonic acid concentration.[5][6]
 			</p>
 			</div>
 
@@ -119,13 +125,25 @@ body {
 		<h4> References </h4>
 			<p>
 			<ol>
-			<li>N.p., 2017. Web. 8 Jan. 2017.</li>
-			<li>Achilli, Andrea et al. "The Forward Osmosis Membrane Bioreactor: A Low Fouling Alternative To MBR Processes". N.p., 2017. Print.</li>
-			<li>Frahm B, et al. "Determination Of Dissolved CO(2) Concentration And CO(2) Production Rate Of Mammalian Cell Suspension Culture Based On Off-Gas Measurement. - Pubmed - NCBI". Ncbi.nlm.nih.gov. N.p., 2017. Web. 8 Jan. 2017.</li>
-			<li>"Neural Networks For Control". Google Books. N.p., 2017. Web. 8 Jan. 2017.</li>
-			<li>Shimizu, K. "An Overview On The Control System Design Of Bioreactors". N.p., 2017. Print.</li>
-			<li>Sullivan, M., P. Galea, and S. Latif. "What Is The Appropriate Oxygen Tension For In Vitro Culture?". N.p., 2017. Print.</li>
-
+			<li>Achilli, Andrea et al. "The Forward Osmosis Membrane Bioreactor: A Low Fouling Alternative To MBR Processes". N.p., 2017. Print.
+</li>
+			<li>"Neural Networks For Control". Google Books. N.p., 2017. Web. 8 Jan. 2017.
+</li>
+			<li>FSullivan, M., P. Galea, and S. Latif. "What Is The Appropriate Oxygen Tension For In Vitro Culture?". N.p., 2017. Print.
+</li>
+			<li>Shimizu, K. "An Overview On The Control System Design Of Bioreactors". N.p., 2017. Print.
+</li>
+			<li>N.p., 2017. Web. 8 Jan. 2017.
+</li>
+			<li>Frahm B, et al. "Determination Of Dissolved CO(2) Concentration And CO(2) Production Rate Of Mammalian Cell Suspension Culture Based On Off-Gas Measurement. - Pubmed - NCBI". Ncbi.nlm.nih.gov. N.p., 2017. Web. 8 Jan. 2017.
+</li>
+			<li> Bioreactor Configurations 341 Submerged Fermentor Systems - Food    Biotechnology". Barnardhealth.us. N.p., 2017. Web. 5 Feb. 2017.
+</li>
+			<li>"BIOSTAT STR". Sartorius.com. N.p., 2017. Web. 5 Feb. 2017.
+</li>
+</ol>
+</p>
+</div>
 
 	<h2>Pacemaker</h2>
 	<div class=" info">

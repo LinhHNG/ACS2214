@@ -84,7 +84,8 @@ margin: 40px;
   background-color: #ffffff;
   border: 2px solid black;
   opacity: 0.9;
-  filter: alpha (opacity=70);}
+  filter: alpha (opacity=70);
+padding: 10px}
 
   figcaption {font-size: 20px}
 
@@ -102,3 +103,19 @@ list-style-type: none;
   filter: alpha (opacity=70);}
 
 figcaption {text-align: center;}
+
+.blockquote {
+  font-family: cursive;
+  font-size: 24px;
+  color: black;
+  font-variant: normal;
+  font-family: Courier;
+  font-weight: 100;
+  line-height: 27.3px;
+  border: 50px solid white;
+  margin: 50px;
+  background-color:white;;
+  opacity: 0.9;
+  filter: alpha (opacity=70);
+
+}
